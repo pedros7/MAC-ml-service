@@ -60,18 +60,18 @@ The goal of this project is to:
 ---
 
 ## System Architecture (High-Level)
-graph TD
-    A[Client] --> B(FastAPI - API Layer)
-    B --> C[Service Layer]
-    
-    subgraph Services [Service Layer Components]
-    C --> D[ELO Engine]
-    C --> E[ML Inference Module]
-    C --> F[Team Balancing Logic]
-    end
-    
-    Services --> G[(Database - PostgreSQL)]
-    Services --> H([Model Registry - MLflow])
+Client
+↓
+FastAPI (API Layer)
+↓
+Service Layer
+├── ELO Engine
+├── ML Inference Module
+└── Team Balancing Logic
+↓
+Database (PostgreSQL)
+↓
+Model Registry (MLflow)
 
 ---
 
