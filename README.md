@@ -61,17 +61,18 @@ The goal of this project is to:
 
 ## System Architecture (High-Level)
 Client
-↓
+  │
+  ▼
 FastAPI (API Layer)
-↓
+  │
+  ▼
 Service Layer
-├── ELO Engine
-├── ML Inference Module
-└── Team Balancing Logic
-↓
-Database (PostgreSQL)
-↓
-Model Registry (MLflow)
+  ├── ELO Engine
+  ├── ML Inference Module
+  └── Team Balancing Logic
+  │
+  ▼
+Database (PostgreSQL) & Model Registry (MLflow)
 
 ---
 
